@@ -1,0 +1,105 @@
+/* son css ler lg de tailwinde dönecek */
+.collage {
+    $collage: &; 
+    @apply tw-grid;
+    @apply lg:tw-grid-cols-2 lg:tw-grid-rows-[minmax(auto,_300px)_228px_minmax(auto,_300px)] lg:tw-gap-x-[50px]; 
+    @apply xl:tw-grid-rows-[minmax(auto,456px)_228px_minmax(auto,456px)] xl:tw-gap-x-32;
+    @apply max-lg:tw-flex max-lg:tw-flex-col max-lg:tw-gap-y-8;
+    
+    &__heading {
+        font-family: 'ITC Avant Garde Gothic Pro';
+        @apply tw-text-[25px] tw-mb-6 tw-leading-8;
+        @apply xl:tw-text-[37px] xl:tw-leading-[50px] xl:tw-mb-10;
+    }
+    &__desc {
+        @apply tw-text-gray tw-leading-[25px] tw-mb-6;
+        @apply lg:tw-leading-8 lg:tw-text-xl lg:tw-mb-10;
+    }
+    &__link {
+        @apply tw-inline-block tw-text-[11px] tw-tracking-[1px] tw-px-2.5 tw-py-[10px];
+        &.-black {
+            @apply tw-text-white tw-bg-black;
+            @apply lg:tw-leading-[17.48px] lg:tw-text-[12.8px] lg:tw-px-3.5 lg:tw-py-[15px];
+        }
+        &.-underline {
+            @apply tw-text-black tw-font-black tw-text-xs tw-underline-offset-[12px] tw-underline tw-px-0;
+            @apply lg:tw-text-base lg:tw-underline-offset-[10px];
+        }
+    }
+    .icon-wrap {
+        @apply tw-align-middle tw-ml-3 tw-inline-block;
+        svg {
+            @apply tw-w-4 tw-h-4;
+        }
+    }
+    &__item {
+        @apply tw-relative;
+        @apply lg:tw-h-full lg:tw-overflow-hidden lg:tw-flex lg:tw-items-center;
+        &:nth-of-type(1) {
+            @apply lg:tw-row-[1_/_2] lg:tw-col-[1_/_2] lg:tw-self-center lg:tw-z-[1];
+            #{$collage}__content {
+                @apply lg:tw-pl-[68px] lg:tw-pr-8;
+            }
+        }
+        &:nth-of-type(3) {
+            @apply lg:tw-col-[2_/_3] lg:tw-row-[3_/_4] lg:tw-self-center;
+            #{$collage}__content {
+                @apply lg:tw-pl-14 lg:tw-pr-28;
+            }
+        }
+    }
+    &__product {
+        @apply tw-absolute tw-right-4 tw-bottom-6 tw-bg-white tw-p-[5px] tw-flex tw-items-center tw-gap-2.5;
+        @apply lg:tw-right-10 tw-bottom-10;
+        &-info {
+            @apply tw-hidden tw-pl-[11px]; 
+            @apply lg:tw-block lg:tw-min-w-[150px];
+        }
+        &-title {
+            @apply tw-text-xs tw-font-bold tw-mb-2;
+        }
+        &-price {
+            @apply tw-text-xs tw-text-gray;
+        }
+        &-image {
+            @apply tw-block;
+        }
+    }
+    img {
+        @apply lg:tw-max-w-full;
+    }
+    &__inner {
+        @apply lg:tw-grid;
+        @apply lg:tw-grid-cols-[repeat(2,1fr)] lg:tw-grid-rows-[minmax(auto,300px)_228px_minmax(auto,300px)];
+        @apply lg:tw-gap-x-[50px] lg:tw-row-[1_/_span_3] lg:tw-col-[1_/_span_2];
+        @apply xl:tw-grid-rows-[minmax(auto,456px)_228px_minmax(auto,456px)] xl:tw-gap-x-32;
+        @apply max-lg:tw-flex max-lg:tw-gap-x-6 max-lg:tw-overflow-auto max-lg:tw-relative max-lg:tw--mb-2.5 max-lg:tw-pl-6;
+        
+        #{$collage}__item {
+            img {
+                @apply lg:tw-aspect-[600_/_684] lg:tw-object-cover lg:tw-h-full;
+            }
+            > img,
+            > a > img {
+                @apply max-lg:tw-w-60 max-lg:tw-h-[273px] max-lg:tw-aspect-[240_/_273] max-lg:tw-mb-2.5;
+                @apply max-lg:tw-max-w-none;
+            }
+            &:nth-of-type(1){
+                @apply lg:tw-row-[1_/_3] lg:tw-col-[2_/_3];
+            }
+            &:nth-of-type(2){
+                @apply lg:tw-row-[2_/_4] lg:tw-col-[1_/_2];
+            }
+        }
+        &::before {
+            @apply max-lg:tw-content-[''] max-lg:tw-fixed max-lg:tw-w-6 max-lg:tw-h-full max-lg:tw-bg-white max-lg:tw-z-[1] max-lg:tw-left-0 max-lg:tw-top-0;
+        }
+    }
+    > div:nth-of-type(1),
+    > div:nth-of-type(2),
+    > div:nth-of-type(3) {
+        @apply max-lg:tw-px-6 max-lg:tw-py-0;
+
+    }
+}
+

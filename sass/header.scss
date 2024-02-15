@@ -1,0 +1,14 @@
+.header {
+    @apply tw-py-3 lg:tw-py-0;
+    &__menu-link {
+        @apply lg:tw-py-16 tw-duration-300;
+    }
+}
+
+.shopify-section-header-sticky {
+    .header {
+        &__menu-link {
+            @apply tw-py-8;
+        }
+    }
+}

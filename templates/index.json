@@ -1,0 +1,39 @@
+{
+  "sections": {
+    "collage_GkeM3w": {
+      "type": "collage",
+      "blocks": {
+        "product_cMG9TB": {
+          "type": "product",
+          "settings": {
+            "product": "5-pocket-jean",
+            "second_image": false
+          }
+        },
+        "image_WiLJqy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner-1.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "product_cMG9TB",
+        "image_WiLJqy"
+      ],
+      "settings": {
+        "heading": "Smarten up your work look or throw on a blazer with jeans for the weekend",
+        "button_label": "SHOP NOW",
+        "link": "https:\/\/www.google.com\/",
+        "description": "At suspendisse augue lectus arcu, accumsan ut sit posuere vitae sit tincidunt semper eu proin leo gravida cursus.",
+        "button_label2": "Read more",
+        "link2": "https:\/\/www.google.com\/",
+        "padding_top": 44,
+        "padding_bottom": 44
+      }
+    }
+  },
+  "order": [
+    "collage_GkeM3w"
+  ]
+}
